@@ -1,0 +1,9 @@
+table,tr,td:hover {
+    cursor: crosshair;
+}
+img:hover{
+    cursor: pointer;
+}
+fieldset,p{
+    cursor:help;
+}
