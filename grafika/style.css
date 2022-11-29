@@ -7,7 +7,7 @@ header
 {
 	width: 100%;
 	float:left;
-	background-color: rgb(170, 241, 128);
+	background-color: rgb(1, 145, 104);
 	text-align: center;
 }
 
@@ -15,7 +15,7 @@ nav
 {
 	width: 30%;
 	float: left;
-	background-color: rgb(230, 230, 230);
+	background-color: rgb(202, 184, 184);
 	height: 765px;
     text-align: center;
     margin: auto;
@@ -28,7 +28,7 @@ main
 {
 	width: 70%;
 	float:left;
-	background-color: lightyellow;
+	background-color: rgb(177, 237, 0);
 	height: 765px;
 }
 div
