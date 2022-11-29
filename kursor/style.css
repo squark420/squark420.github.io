@@ -7,3 +7,12 @@ img:hover{
 fieldset,p{
     cursor:help;
 }
+nav{
+    float:left;
+}
+main{
+    float:left;
+}
+aside{
+    float:left;
+}
