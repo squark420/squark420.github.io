@@ -1,1 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+}
+header{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url(piekarnia.jpg);
+    background-size: cover;
+    background-color: rgb(56, 56, 56);
+    background-blend-mode: multiply;
+    box-shadow: 0 0 30px 7px black;
+}
 
+header p{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 10vh;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    background-color: rgb(105, 98, 84);
+    align-items: center;
+    z-index: 0;
+}
+
+nav button{
+    appearance: button;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: rgb(105, 98, 84) 4px 4px 0 0,#000 4px 4px 0 1px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 17px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 20px;
+    margin: 17px;
+    transition: 0.2s;
+}
+
+.kontakt{
+    width: max-content;
+    background-color: rgb(167, 136, 101);
+    color: #fff;
+    box-shadow: 0 0 4px 0 black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 25px;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.kontakt .boldzik{
+    font-weight: bold;
+}
+
+nav button:hover + .kontakt{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+nav button:hover{
+    background-color: rgb(167, 136, 101);
+    text-shadow: 0 0 5px rgb(206, 206, 206);
+    box-shadow: rgb(43, 39, 33) 4px 4px 0 0,#000 4px 4px 0 1px;
+}
+
+.content img{
+    padding-top: 100px;
+    width: 600px;
+    display: block;
+    margin: auto;
+}
+
+footer{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(105, 98, 84);
+}
+
+footer ul li{
+    display: flex;
+    list-style: none;
+    float: right;
+    margin: 10px;
+}
+
+footer ul li p.boldzik{
+    font-weight: bold;
+}
