@@ -5,12 +5,11 @@
 }
 header{
     width: 100%;
-    height: 300px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-content: center;
-    background-image: url(piekarnia.jpg);
-    background-size: cover;
+     background-size: cover;
     background-color: rgb(56, 56, 56);
     background-blend-mode: multiply;
     box-shadow: 0 0 30px 7px black;
@@ -28,7 +27,7 @@ nav{
     width: 100%;
     height: 80px;
     position: absolute;
-    background-color: rgb(105, 98, 84);
+    background-color: rgb(176, 33, 33);
     align-items: center;
     z-index: 0;
 }
@@ -37,8 +36,7 @@ nav button{
     appearance: button;
     background-color: #000;
     border: 1px solid #000;
-    border-radius: 4px;
-    box-shadow: rgb(105, 98, 84) 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-shadow: rgb(28, 8, 206) 4px 4px 0 0,#000 4px 4px 0 1px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -52,10 +50,9 @@ nav button{
 
 .kontakt{
     width: max-content;
-    background-color: rgb(167, 136, 101);
+    background-color: rgb(0, 240, 216);
     color: #fff;
     box-shadow: 0 0 4px 0 black;
-    border-radius: 10px;
     padding: 10px;
     margin: 5px 25px;
     transition: all 0.5s;
@@ -71,20 +68,21 @@ nav button:hover + .kontakt{
 }
 
 nav button:hover{
-    background-color: rgb(167, 136, 101);
+    background-color: rgb(88, 68, 198);
     text-shadow: 0 0 5px rgb(206, 206, 206);
-    box-shadow: rgb(43, 39, 33) 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-shadow: rgb(103, 201, 18) 4px 4px 0 0,#000 4px 4px 0 1px;
 }
 
 .content img{
     padding-top: 100px;
+    height: auto;
     width: 600px;
     display: block;
     margin: auto;
 }
 
 footer{
-    position: absolute;
+    position: relative;
     color: #fff;
     bottom: 0;
     width: 100%;
