@@ -13,7 +13,7 @@ body {
   font-size: 40px;
   text-align: center;
   margin-bottom: 20px;
-  color: #fa44bb;
+  color: #fa44bd;
   transition: all 0.3s ease-in-out;
 }
 
@@ -22,7 +22,7 @@ img {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 p {
@@ -71,9 +71,8 @@ p {
   width: 50%;
 }
 
-.card:hover .greeting::after {
+.card:hover h1 {
   color: white;
-  content: " Najlepszego!";
 }
 
 .card:hover p{
