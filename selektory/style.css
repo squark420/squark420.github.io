@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background: linear-gradient(45deg, #ff8a00, #e52e71, #89216b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Dodane dla efektu parallax */
+    perspective: 1000px; /* Dodane dla efektu parallax */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.gora{
+	background-color:grey;
+	margin: 10px 10px 0px 10px;
+	padding: 20px;
+}
+
+.gora p{
+	padding: 10px;
+	background-color: yellow;
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	color: red;
+}
+
+.srodek{
+	background-color: rgb(150, 0, 0);
+	margin: 0px 10px 0px 10px;
+	padding: 35px;
+}
+
+.srodek p{
+	background-color: pink;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: 600;
+	color:  white;
+}
+
+.jeden{
+	text-align: right;
+}
+
+.drugi{
+	text-align: left;
+	margin-top: 60px;
+}
+
+.stopa{
+	background-color: rgb(170, 255, 58);
+	margin: 0px 10px 0px 10px;
+	padding: 35px;
+}
+
+.stopa p{
+	background-color: orange;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.pies{
+	color: gray;
+}
+
+.raz{
+	margin: 0px 10px 0px 10px;
+	text-align: center;
+}
+
+.dwa{
+	margin: 30px 200px 30px 10px;
+}
+
+.trzy{
+ 	color: rgb(196, 196, 196);
+ 	margin: 0px 500px 0px 10px;
+	text-align: right;
+}

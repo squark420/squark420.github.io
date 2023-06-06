@@ -1,0 +1,194 @@
+
+
+
+
+
+.kontenerek {
+    height: 25vh;
+    aspect-ratio: 4 / 3;
+    background-color: white;
+    border-radius: 20px;
+    margin: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kwadrat {
+    position: absolute;
+    float: left;
+    height: 25vh;
+    aspect-ratio: 1 / 1;
+}
+
+.pixel1 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(92, 231, 241);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 10vh;
+    right: 5vh;
+}
+
+.pixel2 {
+    width:5vh;
+    height: 5vh;
+    background-color:rgb(228, 231, 194);
+	border:1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10vh;
+	left: 5vh;
+}
+
+.pixel3 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(241, 92, 92);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 7.5vh;
+    left: 7.5vh;
+}
+
+.pixel4 {
+    width:5vh;
+    height: 5vh;
+    background-color:rgb(0, 0, 0);
+	border:1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 7.5vh;
+	left: 12.5vh;
+}
+.pixel5 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(0, 0, 0);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 12.5vh;
+    left: 7.5vh;
+}
+
+.pixel6 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(241, 92, 92);
+	border:1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 12.5vh;
+	left: 12.5vh;
+}
+
+.pixel7 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(219, 241, 92);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 5vh;
+    left: 5vh;
+}
+
+.pixel8 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(92, 95, 241);
+	border:1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 5vh;
+	left: 15vh;
+}
+
+.pixel9 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(241, 92, 92);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 10vh;
+    left: 10vh;
+}
+
+.pixel10 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(194, 92, 241);
+	border:1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 15vh;
+	left: 5vh;
+}
+
+.pixel11 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(92, 241, 112);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 15vh;
+    left: 15vh;
+}
+
+.pixel12 {
+    width:20vh;
+    height:15vh;
+    background-color:rgb(241, 201, 92);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 5vh;
+    left: 2.5vh;
+}
+
+.pixel13 {
+    width:15vh;
+    height:10vh;
+    background-color:rgb(241, 92, 137);
+	border:1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 7.5vh;
+	left: 5vh;
+}
+
+.pixel14 {
+    width:7.5vh;
+    height:7.5vh;
+    background-color:rgb(92, 181, 241);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 7.5vh;
+    left: 5vh;
+}
+
+.pixel15 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(241, 92, 184);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 7.5vh;
+    left: 7.5vh;
+    border-radius: 2.5vh;
+}
+
+.pixel16 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(157, 92, 241);
+	border:1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10vh;
+	left: 10vh;
+    border-radius: 2.5vh;
+}
+
+.pixel17 {
+    width:5vh;
+    height:5vh;
+    background-color:rgb(92, 95, 241);
+	border:1px solid rgba(0, 0, 0, 0.5);
+	position:absolute;
+    top: 12.5vh;
+    left: 12.5vh;
+    border-radius: 2.5vh;
+}

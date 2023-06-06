@@ -12,5 +12,18 @@
     <img src="easter_bunny.jpeg" alt="Zajączek wielkanocny">
     <p>Niech radość Wielkanocy wypełni Twoje serce!</p>
   </div>
+  <button id="myButton">Proszę kliknąć</button>
+
+  <div id="myDialog">
+    <p>Przepraszam za spóźnienie</p>
+  </div>
+
+  <script src="ksk.js">
+  document.getElementById("myButton").addEventListener("click", function () {
+  var dialog = document.getElementById("myDialog");
+  dialog.classList.toggle("active");
+});
+
+  </script>
 </body>
 </html>
