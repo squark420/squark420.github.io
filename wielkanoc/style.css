@@ -1,0 +1,43 @@
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .container:hover {
+    transform: scale(1.1);
+  }
+  
+  h1 {
+    color: #e44236;
+    font-size: 36px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .container:hover h1 {
+    color: #fff;
+  }
+  
+  img {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .container:hover img {
+    opacity: 0.8;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #333;
+  }
+  
