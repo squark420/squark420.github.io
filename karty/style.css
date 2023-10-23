@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+#pojemnik {
+    width: 80%;
+    height: 20%;
+}
+
+.karty {
+    width: 20%;
+}
+
+#As {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    z-index: 1;
+    transition: all 0.1s;
+}
+
+#Król {
+    position: absolute;
+    left: 125px;
+    top: 125px;
+    z-index: 2;
+    transition: all 0.1s;
+}
+
+#Dama {
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    z-index: 3;
+    transition: all 0.1s;
+}
+
+#Walet {
+    position: absolute;
+    left: 175px;
+    top: 175px;
+    z-index: 4;
+    transition: all 0.1s;
+}
+
+#Dziesiątka {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    z-index: 5;
+    transition: all 0.1s;
+}
+
+#As:hover {
+    z-index: 6;
+}
+
+#Król:hover {
+    z-index: 6;
+}
+
+#Dama:hover {
+    z-index: 6;
+}
+
+#Walet:hover {
+    z-index: 6;
+}
+
+#Dziesiątka:hover {
+    z-index: 6;
+}
