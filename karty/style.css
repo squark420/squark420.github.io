@@ -10,9 +10,9 @@ body {
     background-color: blueviolet;
 }
 
-#pojemnik {
+#p{
     width: 80%;
-    height: 20%;
+    border: 2px dotted black;
 }
 
 .karty {
