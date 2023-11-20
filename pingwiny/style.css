@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: flex-end;
+}
+
+img {
+    display: inline-block;
+}
+
+.p1 {
+    position: fixed;
+}
+
+.p2, .p3, .p4 {
+    position: relative;
+}
+
+.p2 {
+    margin-left: 15vw;
+}
