@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundur Uczniowski</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #4CAF50;
+            padding: 10px;
+            color: white;
+            font-size: 24px;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        .comparison {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            overflow: hidden; /* Dodane, aby ukryć obrazy, które "wychodzą" poza kontener */
+        }
+
+        .comparison div {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease-in-out;
+            display: block;
+        }
+
+        .woman, .men {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .comparison:hover .woman {
+            opacity: 0;
+        }
+
+        .comparison:hover .men {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Mundur Uczniowski: Tradycja i Styl
+    </header>
+
+    <section>
+        <h2>1. Tradycja Mundurów Uczniowskich</h2>
+        <p>
+            Mundury uczniowskie mają długą historię i są często związane z tradycją szkolną.
+            Wiele szkół decyduje się na wprowadzenie mundurów, aby promować jedność,
+            poczucie przynależności do szkoły oraz poziom dyscypliny.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Elementy Typowego Munduru Uczniowskiego</h2>
+        <p>
+            Tutaj znajdziesz opis poszczególnych elementów typowego munduru uczniowskiego,
+            takie jak marynarka, spódnica lub spodnie, krawat, itp.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Porównanie Męskiego i żeńskiego Munduru</h2>
+        <div class="comparison" onmouseover="hoverEffect(true)" onmouseout="hoverEffect(false)">
+            <div>
+                <h3>Męski Mundur</h3>
+                <img class="men" src="mez.jpg" alt="Męski Mundur">
+            </div>
+            <div>
+                <h3>Żeński Mundur</h3>
+                <img class="woman" src="wom.jpg" alt="Żeński Mundur">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function hoverEffect(hovered) {
+            const men = document.querySelector('.men');
+            const woman = document.querySelector('.woman');
+            
+            if (hovered) {
+                men.style.opacity = 0;
+                woman.style.opacity = 1;
+            } else {
+                men.style.opacity = 1;
+                woman.style.opacity = 0;
+            }
+        }
+    </script>
+
+</body>
+</html>
