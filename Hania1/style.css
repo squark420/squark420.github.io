@@ -59,26 +59,6 @@ button {
     text-align: center;
 }
 
-.triangle {
-    width: 0;
-    height: 0;
-    border: solid 10vw;
-    border-color: transparent transparent rgb(255, 255, 255) transparent;
-}
-
-.green {
-    border-color: transparent transparent rgb(33, 230, 7) transparent;
-}
-.red {
-    border-color: transparent transparent rgb(230, 7, 7) transparent;
-}
-.yellow {
-    border-color: transparent transparent rgb(230, 197, 7) transparent;
-}
-.blue {
-    border-color: transparent transparent rgb(7, 85, 230) transparent;
-}
-
 .flowerbox {
     margin-top: 5vh;
     width: 20vw;
