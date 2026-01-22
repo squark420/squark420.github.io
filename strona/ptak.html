@@ -1,32 +1,514 @@
-<!doctype html>
-<html>
-	<head>
-	<title> Atlas Ptaków </title>
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Atlas Ptaków, Skwarek />
-	<meta name="descripton" content="Zadanie" />
-	<meta name="author" content="Filip Skwarek" />
-	<meta name="robots" content="all" />
-	</head>
-	<h1> ATLAS PTAKÓW </h1> <br>
-	<body style="background-color:#bbbfc9; ">
-	<table border="2px" style="box-sizing: border-box; height: 10cm; width: 25%; text-align: center; ">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dla Kochanych Dziadków ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #f5f5dc;
+            --text-color: #4e342e;
+            --accent-color: #d84315;
+            --card-bg: #fff8e1;
+            --timer-bg: #efebe9;
+            --font-main: 'Merriweather', serif;
+            --font-headers: 'Lora', serif;
+            --font-hand: 'Patrick Hand', cursive;
+        }
 
-	<tr>
-	<th colspan=4> <img src="https://fajnepodroze.pl/wp-content/uploads/2020/04/gil.jpg" border=3 height=250 width=250></th>  <th>Gil zwyczajny</th>  <th>Gil zwyczajny, gil – gatunek małego ptaka z rodziny łuszczakowatych, zamieszkujący Eurazję. Nie jest zagrożony.</th>  <th> <audio controls> <source src="strona_gil.mp3" type="audio/mpeg"> Twoja przeglądarka nie wspiera audio </audio></th>
-	</tr>
-	<tr>
-	<th colspan=4> <img src="https://mityczne.pl/wp-content/uploads/2017/05/7056623825_6c0b5e96f0_b.jpg" border=3 height=250 width=250></th>  <th>Dymówka</th>  <th>Dymówka, jaskółka dymówka – gatunek niewielkiego ptaka wędrownego z rodziny jaskółkowatych.</th>  <th> <audio controls> <source src="strona_jaskolka.mp3" type="audio/mpeg"> Twoja przeglądarka nie wspiera audio </audio></th>
-	</tr>
-	<tr>
-	<th colspan=4> <img src="https://www.medianauka.pl/biologia/grafika/ptaki/spiewak.jpg" border=3 height=250 width=250></th>  <th>Drozd śpiewak</th>  <th>Drozd śpiewak, śpiewak – gatunek średniej wielkości ptaka z rodziny drozdowatych, zamieszkującego Eurazję. Wierzch ciała brązowy o ciepłym odcieniu, kuper i pokrywy nadogonowe oliwkowe, ogon i wierzch głowy pomarańczowobrązowe. Spód ciała kremowy z gęstymi brązowymi plamkami.</th>  <th> <audio controls> <source src="strona_spiewak.mp3" type="audio/mpeg"> Twoja przeglądarka nie wspiera audio </audio></th>
-	</tr>
-	<tr>
-	<th colspan=4> <img src="https://fajnepodroze.pl/wp-content/uploads/2020/05/Szpak-800x445.jpg" border=3 height=250 width=250></th>  <th>Szpak zwyczajny</th>  <th>Szpak zwyczajny, szpak – gatunek średniej wielkości ptaka z rodziny szpakowatych. Częściowo wędrowny. Pierwotnie zamieszkiwał wyłącznie Eurazję. Nie jest zagrożony wyginięciem.</th>  <th> <audio controls> <source src="strona_szpaku.mp3" type="audio/mpeg"> Twoja przeglądarka nie wspiera audio </audio></th>
-	</tr>
-	<tr>
-	<th colspan=4> <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Oriolus_oriolus_Warsaw.jpg" border=3 height=250 width=250></th>  <th>Wilga zwyczajna</th>  <th>Wilga zwyczajna, wilga – gatunek średniej wielkości ptaka wędrownego z rodziny wilgowatych, jedyny z tej rodziny rozmnażający się w północnej strefie umiarkowanej. Nie jest zagrożony wyginięciem.</th>  <th> <audio controls> <source src="strona_wilga.mp3" type="audio/mpeg"> Twoja przeglądarka nie wspiera audio </audio></th>
-	</tr>
-	</table>
-	</body >
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#d7ccc8 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            padding: 15px;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 2px solid #efebe9;
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-headers);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d7ccc8;
+            padding-bottom: 5px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        /* --- DEDYKACJE --- */
+        .dedication-box {
+            background: var(--card-bg);
+            border-left: 5px solid var(--accent-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .dedication-box:hover {
+            transform: scale(1.02);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        /* --- LICZNIKI --- */
+        .timers-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .timer-card {
+            background: var(--timer-bg);
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            text-align: center;
+            border: 1px solid #d7ccc8;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .timer-box {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .time-unit {
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+            min-width: 45px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .time-unit span {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            line-height: 1.2;
+        }
+
+        .time-unit small {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            color: #795548;
+        }
+
+        /* --- ZDRAPKA --- */
+        .scratch-wrapper {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            border: 4px solid var(--text-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            user-select: none;
+        }
+
+        .scratch-message {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #fff3e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            z-index: 1;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0; left: 0;
+            z-index: 2;
+            cursor: crosshair;
+        }
+
+        /* --- UCIEKAJĄCY GUZIK --- */
+        .game-area {
+            background: #e0f2f1;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #009688;
+        }
+
+        .buttons-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 60px; /* Rezerwacja miejsca */
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-family: var(--font-headers);
+        }
+
+        .btn-yes {
+            background-color: #4caf50;
+            color: white;
+            box-shadow: 0 4px #2e7d32;
+        }
+        .btn-yes:active { box-shadow: 0 2px #2e7d32; transform: translateY(2px); }
+
+        .btn-no {
+            background-color: #f44336;
+            color: white;
+            box-shadow: 0 4px #c62828;
+            position: absolute; /* Kluczowe dla uciekania */
+        }
+
+        /* --- SŁOIK WSPOMNIEŃ --- */
+        .jar-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .jar-quote {
+            font-family: var(--font-hand);
+            font-size: 1.5rem;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5d4037;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 0px #d7ccc8;
+            margin-bottom: 15px;
+            transform: rotate(-1deg);
+        }
+
+        .action-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: var(--font-headers);
+            box-shadow: 0 5px 15px rgba(216, 67, 21, 0.4);
+            transition: transform 0.2s;
+        }
+        .action-btn:active { transform: scale(0.95); }
+
+        /* --- STOPKA --- */
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 1.2rem;
+            border-top: 1px dashed #d7ccc8;
+            padding-top: 20px;
+        }
+
+        /* --- MEDIA QUERIES --- */
+        @media (min-width: 600px) {
+            .container { padding: 40px; }
+            h1 { font-size: 2.8rem; }
+            .timers-wrapper { flex-direction: row; }
+            .time-unit { min-width: 60px; padding: 10px; }
+            .time-unit span { font-size: 1.5rem; }
+            .game-area { min-height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 30px;">
+            <h1>Kochani Dziadkowie!</h1>
+            <p style="text-align: center;">Kartka pełna niespodzianek od Waszych wnuków.</p>
+        </header>
+
+        <!-- Sekcja Dedykacji -->
+        <div class="dedication-box">
+            <span class="icon">🍲👵</span>
+            <p>
+                <span class="highlight" style="font-weight:bold; color:var(--accent-color);">Dla Kochanej Babci,</span><br>
+                Mimo że poruszasz się na wózku, Twoja siła ducha jest dla mnie największą inspiracją. Twoja kuchnia to smak dzieciństwa, a Twoje serce to najcieplejsze miejsce na ziemi.
+            </p>
+        </div>
+
+        <div class="dedication-box" style="border-left-color: #5d4037;">
+            <span class="icon">🥓👴</span>
+            <p>
+                <span class="highlight" style="font-weight:bold; color:var(--accent-color);">Dla Kochanego Dziadka,</span><br>
+                Twoja ciężka praca i fach w ręku zawsze budziły mój podziw. Dziękuję Ci za każdą lekcję życia i za to, że zawsze dbasz o naszą rodzinę.
+            </p>
+        </div>
+
+        <!-- Liczniki -->
+        <div class="section-header" style="text-align: center;">
+            <h2>Jesteśmy z Wami już:</h2>
+            <div class="timers-wrapper">
+                <div class="timer-card">
+                    <h3>Filip</h3>
+                    <small>17.12.2004, 12:00</small>
+                    <div class="timer-box" id="timer-filip"></div>
+                </div>
+                <div class="timer-card">
+                    <h3>Julian</h3>
+                    <small>08.11.2010, 23:45</small>
+                    <div class="timer-box" id="timer-julian"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Uciekający guzik -->
+        <div class="section-header" style="text-align: center;">
+            <h2>Test Prawdy</h2>
+            <div class="game-area" id="gameArea">
+                <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 20px;">Czy jesteśmy Waszymi ulubionymi wnukami? 😎</p>
+                <div class="buttons-container">
+                    <button class="btn btn-yes" onclick="celebrateSuccess()">TAK!</button>
+                    <button class="btn btn-no" id="runawayBtn" onmouseover="moveButton()" onclick="moveButton()">NIE</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Słoik Wspomnień -->
+        <div class="section-header" style="text-align: center;">
+            <h2>Słoik Myśli</h2>
+            <div class="jar-container">
+                <div class="jar-quote" id="quoteDisplay">Kliknij guzik poniżej...</div>
+                <button class="action-btn" onclick="randomQuote()">✨ Wylosuj powód, za który Was kochamy ✨</button>
+            </div>
+        </div>
+
+        <!-- Zdrapka -->
+        <div class="section-header" style="text-align: center;">
+            <h2>Niespodzianka</h2>
+            <p>Zdrapcie pole poniżej, aby odkryć prezent:</p>
+            <div class="scratch-wrapper" id="scratchWrapper">
+                <div class="scratch-message">
+                    ☕🍰🍬<br>
+                    Wspólna herbatka,<br>
+                    ciasto i<br>
+                    <span style="font-size: 1.3rem; color: #d84315;">Ptasie Mleczko!</span>
+                </div>
+                <canvas id="scratchCanvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Stopka -->
+        <div class="signature">
+            Z miłością,<br>Filip i Julian
+        </div>
+    </div>
+
+    <script>
+        // --- KONFIGURACJA DANYCH ---
+        const facts = [
+            "Za pyszne obiadki! 🥘",
+            "Za ciekawe opowieści! 📖",
+            "Za to, że zawsze jesteście! ❤️",
+            "Za najlepsze rady! 💡",
+            "Za Ptasie Mleczko w szafce! 🍬",
+            "Za wspólne Święta! 🎄",
+            "Za wyrozumiałość! 😊"
+        ];
+
+        // --- LICZNIKI ---
+        function updateTimers() {
+            const now = new Date().getTime();
+            // Filip: 12:00, Julian: 23:45
+            const targets = [
+                { id: 'timer-filip', date: new Date("2004-12-17T12:00:00").getTime() },
+                { id: 'timer-julian', date: new Date("2010-11-08T23:45:00").getTime() }
+            ];
+
+            targets.forEach(t => {
+                const diff = now - t.date;
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                const el = document.getElementById(t.id);
+                if(el) {
+                    el.innerHTML = `
+                        <div class="time-unit"><span>${d}</span><small>Dni</small></div>
+                        <div class="time-unit"><span>${h}</span><small>Godz</small></div>
+                        <div class="time-unit"><span>${m}</span><small>Min</small></div>
+                        <div class="time-unit"><span>${s}</span><small>Sek</small></div>
+                    `;
+                }
+            });
+        }
+        setInterval(updateTimers, 1000);
+        updateTimers();
+
+        // --- SŁOIK WSPOMNIEŃ ---
+        function randomQuote() {
+            const quote = facts[Math.floor(Math.random() * facts.length)];
+            const display = document.getElementById('quoteDisplay');
+            display.style.opacity = 0;
+            setTimeout(() => {
+                display.innerText = quote;
+                display.style.opacity = 1;
+                confetti({ particleCount: 30, spread: 50, origin: { y: 0.7 } });
+            }, 200);
+        }
+
+        // --- UCIEKAJĄCY GUZIK ---
+        function moveButton() {
+            const btn = document.getElementById('runawayBtn');
+            const area = document.getElementById('gameArea');
+            
+            const areaRect = area.getBoundingClientRect();
+            const btnRect = btn.getBoundingClientRect();
+
+            // Oblicz maksymalne pozycje wewnątrz kontenera
+            const maxX = areaRect.width - btnRect.width - 20; // 20px marginesu
+            const maxY = areaRect.height - btnRect.height - 20;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            btn.style.position = 'absolute';
+            btn.style.left = randomX + 'px';
+            btn.style.top = randomY + 'px';
+        }
+
+        function celebrateSuccess() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+            alert("Wiedzieliśmy! Wy też jesteście najlepsi! ❤️");
+        }
+
+        // --- ZDRAPKA (FIXED) ---
+        window.onload = function() {
+            initScratchCard();
+        };
+
+        function initScratchCard() {
+            const canvas = document.getElementById('scratchCanvas');
+            const ctx = canvas.getContext('2d');
+            const wrapper = document.getElementById('scratchWrapper');
+            let isDrawing = false;
+
+            const width = wrapper.offsetWidth;
+            const height = wrapper.offsetHeight;
+            canvas.width = width;
+            canvas.height = height;
+
+            ctx.fillStyle = '#bcaaa4';
+            ctx.fillRect(0, 0, width, height);
+            
+            ctx.fillStyle = '#fff';
+            ctx.font = 'bold 20px Merriweather';
+            ctx.textAlign = "center";
+            ctx.fillText("Zdrap tutaj...", width / 2, height / 2 + 5);
+
+            function getMousePos(e) {
+                const rect = canvas.getBoundingClientRect();
+                let clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                let clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                return { x: clientX - rect.left, y: clientY - rect.top };
+            }
+
+            function scratch(e) {
+                if (!isDrawing) return;
+                if(e.type === 'touchmove') e.preventDefault(); 
+                
+                const pos = getMousePos(e);
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 25, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e); });
+            canvas.addEventListener('touchstart', (e) => { isDrawing = true; scratch(e); }, {passive: false});
+            
+            window.addEventListener('mouseup', () => isDrawing = false);
+            window.addEventListener('touchend', () => isDrawing = false);
+            
+            canvas.addEventListener('mousemove', scratch);
+            canvas.addEventListener('touchmove', scratch, {passive: false});
+        }
+    </script>
+</body>
+</html>
